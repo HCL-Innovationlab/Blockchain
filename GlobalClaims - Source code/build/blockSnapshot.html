@@ -1,0 +1,246 @@
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+		
+		
+       <link rel="stylesheet" type="text/css" href="app.css" />
+        <title>Block Snapshot</title>
+        <meta charset="utf-8" lang="en" />
+		<style>
+		#overlay{display:block}
+		</style>
+    </head>
+
+    <body onload="getBlockID()">
+		<!--<img src="images/loader.gif">-->
+		<!--<div class="overlay1" id="overlay">
+    <div id="loading-img"></div>
+</div>-->
+        <!--<h1 class="use-heading">CLAIM RAISE PAGE</h1>-->
+        <header class="use-main-header blockchainHeader">
+            <a href="index.html"><img id="logo-header" class="header-logo" src="images/logo.jpg" alt="Co-Innovation Lab, Pune"></a><h1 class="use-heading claimTitleReverse pull-right">BLOCK SNAPSHOT</h1>
+        </header>
+		<nav>
+		<p class="col-md-8 padding-top-10">
+				<a href="index.html">Home</a>: Blocks Snapshot
+			</p>
+			<ul class="pull-right col-md-4 padding-top-5">
+			<li class="col-md-2">
+			</li>
+				<li> <a href="index.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">Raise a claim</a></li>
+				<li> <a href="viewClaims.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">View Claims</a></li>
+				<li> <a  href="blockSnapshot.html" rel="outline-outward" class="btn-u btn-u-red outline-outward active">Block Snapshot</a></li>
+			</ul>
+		</nav>
+        <div class="container" style="padding:1em">
+		<div class="panel panel-green">
+								<div class="panel-heading">
+									<h3 class="panel-title"><i class="fa fa-tasks"></i> Block Snapshot</h3>
+								</div>
+								<div class="panel-body">
+									<div class="panel-group acc-v1" id="accordion-1">
+						<!--<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle collapsed col-md-4" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-1" aria-expanded="false">
+										<i class="fa fa-arrow-right" aria-hidden="true" title="Click To Expand"></i>
+										<i class="fa fa-arrow-down" aria-hidden="true" title="Click To Collapse"></i>
+										  5555555555555
+									</a>
+									<p class="col-md-2  txtRight small">No. of Txn :6</p>
+									<p class="col-md-2  txtRight small">Timestm:20-04-2017 12:00:03</p>
+									<p class="col-md-2  txtRight small">more details</p>
+									<p class="col-md-2  txtRight small">more details</p>
+								</h4>
+							</div>
+							<div id="collapse-1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+									<div class="row">
+										
+										<div class="col-md-12">
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>-->
+<!--
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle collapsed col-md-4" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-2" aria-expanded="false">
+										<i class="fa fa-arrow-right" aria-hidden="true" title="Click To Expand"></i>
+										<i class="fa fa-arrow-down" aria-hidden="true" title="Click To Collapse"></i>
+										898989898998998989 
+									</a>
+									<p class="col-md-2  txtRight small">No. of Txn :6</p>
+									<p class="col-md-2  txtRight small">Timestm:20-04-2017 12:00:03</p>
+									<p class="col-md-2  txtRight small">more details</p>
+									<p class="col-md-2  txtRight small">more details</p>
+								</h4>
+							</div>
+							<div id="collapse-2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+									<div class="row">
+										
+										<div class="col-md-12">
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle collapsed col-md-4" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-3" aria-expanded="false">
+										<i class="fa fa-arrow-right" aria-hidden="true" title="Click To Expand"></i>
+										<i class="fa fa-arrow-down" aria-hidden="true" title="Click To Collapse"></i>
+										898989898998998989 
+									</a>
+									<p class="col-md-2  txtRight small">No. of Txn :6</p>
+									<p class="col-md-2  txtRight small">Timestm:20-04-2017 12:00:03</p>
+									<p class="col-md-2  txtRight small">more details</p>
+									<p class="col-md-2  txtRight small">more details</p>
+								</h4>
+							</div>
+							<div id="collapse-3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+									<div class="row">
+										
+										<div class="col-md-12">
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a id = class="accordion-toggle collapsed col-md-4" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-4" aria-expanded="false">
+										<i class="fa fa-arrow-right" aria-hidden="true" title="Click To Expand"></i>
+										<i class="fa fa-arrow-down" aria-hidden="true" title="Click To Collapse"></i>
+										898989898998998989 
+									</a>
+									<p class="col-md-2  txtRight small">No. of Txn :6</p>
+									<p class="col-md-2  txtRight small">Timestm:20-04-2017 12:00:03</p>
+									<p class="col-md-2  txtRight small">more details</p>
+									<p class="col-md-2  txtRight small">more details</p>
+								</h4>
+							</div>
+							<div id="collapse-4" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+									<div class="row">
+										
+										<div class="col-md-12">
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+											<a href="transactionDetails.html" class="form-control">fasdfkdhsakh89898933jddjd</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>-->
+					</div>
+								</div>
+							</div>
+		
+            
+		</div>
+                </div>
+				<div class="footer-v1">
+				<div class="footer">
+				<div class="container">
+					<div class="row">
+						<!-- About -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<a href="index.html"><img id="logo-footer" class="footer-logo" src="images/logo.jpg" alt=""></a>
+							<p>The Co-Innovation Lab format provides a standalone entrepreneurial environment where business stakeholders and end-users are able to directly engage with the product design team</p>
+						</div><!--/col-md-3-->
+						<!-- End About -->
+
+						<!-- Latest -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="posts">
+								<div class="headline"><h2>Latest Posts</h2></div>
+								<ul class="list-unstyled latest-list">
+									<li>
+										<a href="https://en.wikipedia.org/wiki/Blockchain" target="_blank">What is BlockChain?</a>
+										<small>Mar 23, 2017</small>
+									</li>
+									<li>
+										<a href="https://letstalkpayments.com/an-overview-of-blockchain-technology/" target="_blank">Blockchain who is it for?</a>
+										<small>Mar 12, 2017</small>
+									</li>
+									<li>
+										<a href="#">Whats New?</a>
+										<small>Mar 10, 2014</small>
+									</li>
+								</ul>
+							</div>
+						</div><!--/col-md-3-->
+						<!-- End Latest -->
+
+						<!-- Link List -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="headline"><h2>Links</h2></div>
+							<ul class="list-unstyled link-list">
+								<li><a href="#">HR View</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">RM View</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Candidate Login</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Blockchain Transactions</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Home</a><i class="fa fa-angle-right"></i></li>
+							</ul>
+						</div><!--/col-md-3-->
+						<!-- End Link List -->
+
+						<!-- Address -->
+						<div class="col-md-3 map-img md-margin-bottom-40">
+							<div class="headline"><h2>Contact Us</h2></div>
+							<address class="md-margin-bottom-40">
+									Pune, India<br>
+									+91 1802545456<br>
+									<a href="mailto:CoInnovationLab@hcl.com" class="">CoInnovationLab@hcl.com</a>
+							</address>
+						</div><!--/col-md-3-->
+						<!-- End Address -->
+					</div>
+				</div>
+			</div>
+			</div>
+<div id="overlay">
+	<span class="processingTxt"> 
+		<h6>Processing</h6>
+	</span>
+</div>
+
+        <!--    <script src="lib/bootstrap/js/bootstrap.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="app.js"></script>
+    </body>
+
+    </html>

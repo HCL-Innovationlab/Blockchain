@@ -1,0 +1,166 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+		
+		
+      
+        <link rel="stylesheet" type="text/css" href="app.css" />
+		
+		
+        <title>View all claims</title>
+        <meta charset="utf-8" lang="en" />
+    </head>
+
+    <body onload="viewClaimsOnLoad()">
+        <!--<h1 class="use-heading">CLAIM RAISE PAGE</h1>-->
+        <header class="use-main-header blockchainHeader" onload="raiseClaim.viewClaim()">
+            <a href="index.html"><img id="logo-header" class="header-logo" src="images/logo.jpg" alt="Co-Innovation Lab, Pune"></a><h1 class="use-heading claimTitleReverse pull-right">VIEW CLAIMS</h1>
+        </header>
+		<nav>
+		<p class="col-md-8 padding-top-10">
+				<a href="index.html">Home</a>: View Claims
+			</p>
+			<ul class="pull-right col-md-4 padding-top-5">
+			<li class="col-md-2">
+			</li>
+				<li> <a href="index.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">Raise a claim</a></li>
+				<li> <a href="viewClaims.html" rel="outline-outward" class="btn-u btn-u-red outline-outward active">View Claims</a></li>
+				<li> <a  href="blockSnapshot.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">Block Snapshot</a></li>
+			</ul>
+		</nav>
+        <div class="container" style="padding:1em">
+            <div class="row">
+                 <div class="col-md-6">
+				<div class="col-md-10 shadow-wrapper">
+							<div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+								<h2>View all raised claims here !!</h2>
+								<p>View claims will have Claim ID, Amount, Description status.</p>
+								<br>
+								<p class="list-group-item-text">Alternatively click on raise claim to raise claim or use top navigation</p>
+								<a href="index.html"><button class="btn-u btn-u-dark-blue">Raise A Claim</button></a>
+							</div>
+						</div>
+
+				</div>
+	           <div class="col-md-6">
+					<div class="panel panel-green margin-bottom-40" style="height:300px; overflow:auto" >
+						<div class="panel-heading">
+							<h3 class="panel-title"><i class="fa fa-tasks"></i> View Claims</h3>
+						</div>
+						<div class="panel-body">
+							<p>In this table Claim ID, amount and description fields are shown all the successful Claim ID are linked to its detailed, click on Claim ID to view</p>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Claim ID</th>
+									<th class="hidden-sm">Amount</th>
+									<th>Description</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody  id="tableBodyContainer">
+								<!--<tr>
+									<td>1</td>
+									<td></td>
+									<td class="hidden-sm">23000</td>
+									<td>Description will be displayed here, lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</td>
+									<td><span class="label label-info">Pending</span></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td><a href="transactionDetails.html">67778778</a></td>
+									<td class="hidden-sm">10000</td>
+									<td>Description will be displayed here</td>
+									<td><span class="label label-success">Success</span></td>
+								</tr>-->
+								<!--tr>
+									<td>3</td>
+									<td><a href="transactionDetailsError.html">57778778</a></td>
+									<td class="hidden-sm">22222</td>
+									<td>Description will be displayed here</td>
+									<td><span class="label label-danger">Error!</span></td>
+								</tr-->
+								
+							</tbody>
+						</table>
+					</div>
+
+
+                    </div>
+					</div>
+                </div>
+				<div class="footer-v1">
+				<div class="footer">
+				<div class="container">
+					<div class="row">
+						<!-- About -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<a href="index.html"><img id="logo-footer" class="footer-logo" src="images/logo.jpg" alt=""></a>
+							<p>The Co-Innovation Lab format provides a standalone entrepreneurial environment where business stakeholders and end-users are able to directly engage with the product design team</p>
+						</div><!--/col-md-3-->
+						<!-- End About -->
+
+						<!-- Latest -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="posts">
+								<div class="headline"><h2>Latest Posts</h2></div>
+								<ul class="list-unstyled latest-list">
+									<li>
+										<a href="https://en.wikipedia.org/wiki/Blockchain" target="_blank">What is BlockChain?</a>
+										<small>Mar 23, 2017</small>
+									</li>
+									<li>
+										<a href="https://letstalkpayments.com/an-overview-of-blockchain-technology/" target="_blank">Blockchain who is it for?</a>
+										<small>Mar 12, 2017</small>
+									</li>
+									<li>
+										<a href="#">Whats New?</a>
+										<small>Mar 10, 2014</small>
+									</li>
+								</ul>
+							</div>
+						</div><!--/col-md-3-->
+						<!-- End Latest -->
+
+						<!-- Link List -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="headline"><h2>Links</h2></div>
+							<ul class="list-unstyled link-list">
+								<li><a href="#">HR View</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">RM View</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Candidate Login</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Blockchain Transactions</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Home</a><i class="fa fa-angle-right"></i></li>
+							</ul>
+						</div><!--/col-md-3-->
+						<!-- End Link List -->
+
+						<!-- Address -->
+						<div class="col-md-3 map-img md-margin-bottom-40">
+							<div class="headline"><h2>Contact Us</h2></div>
+							<address class="md-margin-bottom-40">
+									Pune, India<br>
+									+91 1802545456<br>
+									<a href="mailto:CoInnovationLab@hcl.com" class="">CoInnovationLab@hcl.com</a>
+							</address>
+						</div><!--/col-md-3-->
+						<!-- End Address -->
+					</div>
+				</div>
+			</div>
+			</div>
+<div id="overlay">
+	<span class="processingTxt"> 
+		<h6>Processing</h6>
+	</span>
+</div>
+
+        <!--    <script src="lib/bootstrap/js/bootstrap.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+
+    </html>

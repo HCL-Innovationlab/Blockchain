@@ -1,0 +1,141 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+		
+		<link rel="stylesheet" type="text/css" href="app.css" />
+		
+        <title>Raise Claim</title>
+        <meta charset="utf-8" lang="en" />
+    </head>
+
+    <body onload="watchClaims('onload'); setFlag()">
+        <!--<h1 class="use-heading">CLAIM RAISE PAGE</h1>-->
+        <header class="use-main-header blockchainHeader">
+            <a href="index.html"><img id="logo-header" class="header-logo" src="images/logo.jpg" alt="Co-Innovation Lab, Pune"></a><h1 class="use-heading claimTitleReverse pull-right">RAISE A CLAIM</h1>
+        </header>
+		<nav>
+		<p class="col-md-8 padding-top-10">
+				Home
+			</p>
+			<ul class="pull-right col-md-4 padding-top-5">
+			<li class="col-md-2">
+			</li>
+				<li> <a href="index.html" rel="outline-outward" class="btn-u btn-u-red outline-outward active">Raise a claim</a></li>
+				<li> <a href="viewClaims.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">View Claims</a></li>
+				<li> <a  href="blockSnapshot.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">Block Snapshot</a></li>
+			</ul>
+		</nav>
+        <div class="container" style="padding:1em">
+            <div class="row">
+                <div class="col-md-6">
+				<div class="col-md-10 shadow-wrapper">
+							<div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+								<h2>Raise a new Claim here !!</h2>
+								<p>You can raise a new claim by providing your Claim ID, Amount and Description.</p>
+								<br>
+								<p class="list-group-item-text">Alternatively click on view claims to view all raised claims and status</p>
+								<a href="viewClaims.html"><button class="btn-u btn-u-dark-blue">View Claims</button></a>
+							</div>
+						</div>
+
+				</div>
+	           <div class="col-md-6">
+					
+						<div class="form-group has-success">
+							<label class="claimId" for="claimID">Claim ID <span class="smallChar">(Numerical Only)</span>
+							<span id="msgs"></span>
+							</label>
+								<input type="number" min = "1" class="form-control form-control-success" id="claimID" aria-describedby="claimIDHelp" placeholder="Enter Claim ID" onkeyup="isNumberCid(event)" autocomplete="off" >
+                                <small id="claimIDHelp" class="form-text text-muted"></small>
+						</div>
+					  <div class="form-group has-success">
+						<label for="amount">Amount <span class="smallChar">(Numerical Only)</span></label>
+						<input type="number" min = "1" class="form-control form-control-success" id="amount" aria-describedby="amountHelp" placeholder="Enter Amount" onkeyup="isNumberAmt(event)" autocomplete="off">
+						<small id="amountHelp" class="form-text text-muted"></small>
+					  </div>
+					  <div class="form-group has-success">
+						<label for="description">Description<span class="smallChar">(Max 32 characters)</span></label>
+						<textarea class="form-control" rows=4 cols=40 id="description" maxlength = "32" aria-describedby="descriptionHelp" placeholder="Enter Description(Max 32 characters)" onkeyup="isDescription()"></textarea>
+                        <small id="descriptionHelp" class="form-text text-muted form-control-danger"></small>
+
+						
+					  </div>
+  
+						<button class="btn btn-primary" id="submitButton" type="button" onclick="submitClick()" disabled = "disabled">Raise Claim</button>
+					
+                    </div>
+					</div>
+                </div>
+				<div class="footer-v1">
+				<div class="footer">
+				<div class="container">
+					<div class="row">
+						<!-- About -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<a href="index.html"><img id="logo-footer" class="footer-logo" src="images/logo.jpg" alt="Co-Innovation Lab, Pune"></a>
+							<p>The Co-Innovation Lab format provides a standalone entrepreneurial environment where business stakeholders and end-users are able to directly engage with the product design team</p>
+						</div><!--/col-md-3-->
+						<!-- End About -->
+
+						<!-- Latest -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="posts">
+								<div class="headline"><h2>Latest Posts</h2></div>
+								<ul class="list-unstyled latest-list">
+									<li>
+										<a href="https://en.wikipedia.org/wiki/Blockchain" target="_blank">What is BlockChain?</a>
+										<small>Mar 23, 2017</small>
+									</li>
+									<li>
+										<a href="https://letstalkpayments.com/an-overview-of-blockchain-technology/" target="_blank">Blockchain who is it for?</a>
+										<small>Mar 12, 2017</small>
+									</li>
+									<li>
+										<a href="#">Whats New?</a>
+										<small>Mar 10, 2014</small>
+									</li>
+								</ul>
+							</div>
+						</div><!--/col-md-3-->
+						<!-- End Latest -->
+
+						<!-- Link List -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="headline"><h2>Links</h2></div>
+							<ul class="list-unstyled link-list">
+								<li><a href="#">HR View</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">RM View</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Candidate Login</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Blockchain Transactions</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Home</a><i class="fa fa-angle-right"></i></li>
+							</ul>
+						</div><!--/col-md-3-->
+						<!-- End Link List -->
+
+						<!-- Address -->
+						<div class="col-md-3 map-img md-margin-bottom-40">
+							<div class="headline"><h2>Contact Us</h2></div>
+							<address class="md-margin-bottom-40">
+									Pune, India<br>
+									+91 1802545456<br>
+									<a href="mailto:CoInnovationLab@hcl.com" class="">CoInnovationLab@hcl.com</a>
+							</address>
+						</div><!--/col-md-3-->
+						<!-- End Address -->
+					</div>
+				</div>
+			</div>
+			</div>
+<div id="overlay">
+	<span class="processingTxt"> 
+		<h6>Processing</h6>
+	</span>
+</div>
+
+        <!--    <script src="lib/bootstrap/js/bootstrap.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="app.js"></script>
+    </body>
+
+    </html>

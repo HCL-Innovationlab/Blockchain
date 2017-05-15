@@ -1,0 +1,251 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+		<link rel="stylesheet" type="text/css" href="app.css" />
+        <title>Transaction Details</title>
+        <meta charset="utf-8" lang="en" />
+	<style>
+		#overlay{display:block}
+		</style>
+    </head>
+
+    <body onload="transactionDetailOnLoad()">
+		
+			<!--<div class="overlay1" id="overlay">
+    <div id="loading-img"></div>
+</div>-->
+        <!--<h1 class="use-heading">CLAIM RAISE PAGE</h1>-->
+        <header class="use-main-header blockchainHeader">
+            <a href="index.html"><img id="logo-header" class="header-logo" src="images/logo.jpg" alt="Co-Innovation Lab, Pune"></a><h1 class="use-heading claimTitleReverse pull-right">TRANSACTION INFORMATION</h1>
+        </header>
+		<nav>
+		<p class="col-md-8 padding-top-10">
+				<a href="index.html">Home</a>: <a href="viewClaims.html">View Claims</a> : Transaction Details
+			</p>
+			<ul class="pull-right col-md-4 padding-top-5">
+			<li class="col-md-2">
+			</li>
+				<li> <a href="index.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">Raise a claim</a></li>
+				<li> <a href="viewClaims.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">View Claims</a></li>
+				<li> <a  href="blockSnapshot.html" rel="outline-outward" class="btn-u btn-u-red outline-outward">Block Snapshot</a></li>
+			</ul>
+		</nav>
+        <div class="container" style="padding:1em">
+		<div class="panel panel-green margin-bottom-40">
+						<div class="panel-heading">
+							<h3 class="panel-title col-md-8"><i class="fa fa-tasks"></i> Transaction Information</h3>
+							
+						</div>
+						<div class="panel-body">
+							<p>View the transaction details </p>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Key</th>
+									<th>Details</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>TxHash:</td>
+									<td id="TxHash"></td>
+									
+								</tr>
+								<tr id="panelBlockDetails">
+									<!--td>Block Height:</td>
+									<td>3515410 (1 block confirmation)</td-->
+									<td colspan=2 class="first">
+									<div class="panel panel-default" >
+									<div class="panel-heading">
+										<h4 class="panel-title">
+										
+											<a class="accordion-toggle collapsed col-md-12" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-One" aria-expanded="false">
+												<p class="col-md-3">
+												<i class="fa fa-arrow-right" aria-hidden="true" title="Click To Expand"></i>
+												<i class="fa fa-arrow-down" aria-hidden="true" title="Click To Collapse"></i>
+												Block Height</p>
+												<p id="blockNumber" class="col-md-9"></p>
+											</a>
+											
+										</h4>
+									</div>
+							<div id="collapse-One" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+									<div class="row">
+										
+										<table class="table">
+										<tbody>
+											<tr>
+												<td>Block Hash:</td>
+												<td id="blockHash"></td>
+												
+											</tr>
+											<tr>
+												<td>Difficulty:</td>
+												<td id="blockDifficulty"></td>
+											</tr>
+											<tr>
+												<td>Gas Used:</td>
+												<td id="blockGasUsed" ></td>
+											</tr>
+											<tr>
+												<td>Gas Limit :</td>
+												<td id="gasLimit" ></td>
+											</tr>
+											<tr>
+												<td>Nonce:</td>
+												<td id="nonce"></td>
+											</tr>
+											<tr>
+												<td>Block Size:</td>
+												<td id="blockSize"></td>
+											</tr>
+											<tr>
+												<td>Parent Hash:</td>
+												<td id="parentHash"></td>
+											</tr>
+											<tr>
+												<td>Miner:</td>
+												<td id="miner"></td>
+											</tr>
+
+										</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+									</td>
+									
+								</tr>
+								<!--<tr>
+									<td>TimeStamp:</td>
+									<td id="TimeStamp"></td>
+									
+								</tr>-->
+								<tr>
+									<td>From:</td>
+									<td id="from"></td>
+									
+								</tr>
+								<tr>
+									<td>To:</td>
+									<td id="to"></td>
+									
+								</tr>
+								<!--<tr>
+									<td>Value:</td>
+									<td id="value">0 Ether</td>
+									
+								</tr>-->
+								<!--<tr>
+									<td>Gas Limit:</td>
+									<td >90000</td>
+									
+								</tr>-->
+								<!--<tr>
+									<td>Gas Price:</td>
+									<td>0.00000002 Ether</td>
+								</tr>-->
+								<tr>
+									<td>Gas Used By Transaction:</td>
+									<td id="gasUsed"></td>
+								</tr>
+								<!--<tr>
+									<td>Actual Tx Cost/Fee:</td>
+									<td>0.00042 Ether ($0.02)</td>
+								</tr>-->
+								<tr>
+									<td>Cumulative Gas Used:</td>
+									<td id="cumulativeGasUsed"></td>
+								</tr>
+								<!--<tr>
+									<td>Nonce:</td>
+									<td>1581551</td>
+								</tr>-->
+								<!--<tr>
+									<td>Input Data:</td>
+									<td><textarea class="form-control"></textarea></td>
+								</tr>-->
+								
+							</tbody>
+						</table>
+					</div>
+            
+		</div>
+                </div>
+				<div class="footer-v1">
+				<div class="footer">
+				<div class="container">
+					<div class="row">
+						<!-- About -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<a href="index.html"><img id="logo-footer" class="footer-logo" src="images/logo.jpg" alt=""></a>
+							<p>The Co-Innovation Lab format provides a standalone entrepreneurial environment where business stakeholders and end-users are able to directly engage with the product design team</p>
+						</div><!--/col-md-3-->
+						<!-- End About -->
+
+						<!-- Latest -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="posts">
+								<div class="headline"><h2>Latest Posts</h2></div>
+								<ul class="list-unstyled latest-list">
+									<li>
+										<a href="https://en.wikipedia.org/wiki/Blockchain" target="_blank">What is BlockChain?</a>
+										<small>Mar 23, 2017</small>
+									</li>
+									<li>
+										<a href="https://letstalkpayments.com/an-overview-of-blockchain-technology/" target="_blank">Blockchain who is it for?</a>
+										<small>Mar 12, 2017</small>
+									</li>
+									<li>
+										<a href="#">Whats New?</a>
+										<small>Mar 10, 2014</small>
+									</li>
+								</ul>
+							</div>
+						</div><!--/col-md-3-->
+						<!-- End Latest -->
+
+						<!-- Link List -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="headline"><h2>Links</h2></div>
+							<ul class="list-unstyled link-list">
+								<li><a href="#">HR View</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">RM View</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Candidate Login</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Blockchain Transactions</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Home</a><i class="fa fa-angle-right"></i></li>
+							</ul>
+						</div><!--/col-md-3-->
+						<!-- End Link List -->
+
+						<!-- Address -->
+						<div class="col-md-3 map-img md-margin-bottom-40">
+							<div class="headline"><h2>Contact Us</h2></div>
+							<address class="md-margin-bottom-40">
+									Pune, India<br>
+									+91 1802545456<br>
+									<a href="mailto:CoInnovationLab@hcl.com" class="">CoInnovationLab@hcl.com</a>
+							</address>
+						</div><!--/col-md-3-->
+						<!-- End Address -->
+					</div>
+				</div>
+			</div>
+			</div>
+
+
+        <!--    <script src="lib/bootstrap/js/bootstrap.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="app.js"></script>
+		<script>
+		
+
+		</script>
+    </body>
+
+    </html>
